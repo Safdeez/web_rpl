@@ -1,0 +1,93 @@
+:root {
+    --primary-rgb: 255, 255, 0; 
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    margin: 0;
+}
+
+@keyframes navbar-lighting {
+    from { left: -50%; }
+    to { left: 100%; }
+}
+
+nav .navbar-body {
+    background-color: black !important;
+    opacity: 80%;
+    height: 75px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+nav .navbar-body div:first-child {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar-body div:first-child a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+nav .navbar-body div:first-child a img {
+    margin-left: 1.5rem;
+    border-radius: 50%;
+}
+
+nav .navbar-body div:first-child a p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 1rem;
+    font-size: large;
+    font-weight: bold;
+}
+
+nav .navbar-body div:last-child {
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+nav .navbar-body div:last-child a {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 1.5rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav .navbar-body div:last-child a:hover {
+    color: rgb(var(--primary-rgb));
+    text-shadow: 0px 0px 5px rgb(var(--primary-rgb));
+}
+
+nav .navbar-lighting {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(var(--primary-rgb));
+}
+
+nav .navbar-lighting::after {
+    position: relative;
+    content: "";
+    display: block;
+    width: 25%;
+    border: 0.2rem solid rgb(var(--primary-rgb));
+    animation-name: navbar-lighting;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    box-shadow: 
+        0px 0px 10px rgb(var(--primary-rgb)),
+        0px 0px 20px rgb(var(--primary-rgb)),
+        1px 0px 5px rgb(var(--primary-rgb)),
+        -1px 0px 5px rgb(var(--primary-rgb));
+}
