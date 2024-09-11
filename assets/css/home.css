@@ -14,10 +14,6 @@
     scroll-behavior: smooth;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-}
 
 @keyframes navbar-lighting {
     from { left: -50%; }
@@ -239,3 +235,185 @@ transition: all .50s ease;
     width: 20px;
     left: 80%;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.navbar-body div a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar-lighting {
+    display: block;
+    height: 4px;
+    background-color: #ff9900;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.members-list {
+    display: flex;
+    flex-wrap: wrap;  /* Allows members to wrap to the next row */
+    justify-content: space-around;  /* Distributes members evenly */
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+.member {
+    text-align: center;
+    max-width: 250px;
+    flex: 1 1 22%;  /* Flex basis of 22% ensures four members fit per row with space in between */
+    margin-bottom: 20px;  /* Adds space between rows */
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+
+
+/* Gaya dasar halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #222; /* Latar belakang hitam */
+    color: #fff; /* Teks putih */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffcc00; /* Warna kuning */
+    padding: 10px 20px;
+}
+
+.navbar-body a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar-body a:hover {
+    color: #fff; /* Warna putih saat hover */
+}
+
+.navbar-lighting {
+    background-color: #000;
+    height: 4px;
+    width: 100%;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffcc00; /* Kuning */
+    color: #000; /* Teks hitam */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* Daftar anggota */
+.members-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #333; /* Warna latar belakang abu-abu gelap untuk kontras */
+}
+
+.member {
+    text-align: center;
+    max-width: 250px;
+    flex: 1 1 22%;
+    margin-bottom: 20px;
+    border: 3px solid yellow; /* Border kuning */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #000; /* Latar belakang hitam */
+    color: #fff; /* Teks putih */
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+.member:hover {
+    transform: scale(1.05); /* Perbesar sedikit saat hover */
+    border-color: #ffcc00; /* Ubah warna border saat hover */
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid black;
+    padding: 5px;
+    background-color: yellow;
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+.member img:hover {
+    transform: scale(1.1); /* Perbesar sedikit gambar saat hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 1em;
+}
+
+/* Tombol dan elemen interaktif */
+button {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
