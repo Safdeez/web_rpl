@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-rgb: 255, 255, 0; 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #000;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 100px;
+    background-color: #000; /* Primary: hitam */
+    color: #FFD700; /* Secondary: kuning */
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #fff;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.content img {
+    margin-left: 20px;
+    width: 350px;
+    height: auto;
+}
+
+.content p {
+    flex: 1;
+    text-align: justify;
+    color: #FFD700;
+}
+
+@keyframes navbar-lighting {
+    from { left: -50%; }
+    to { left: 100%; }
+}
+
+nav .navbar-body {
+    background-color: #000 !important;
+    opacity: 80%;
+    height: 75px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+nav .navbar-body div:first-child {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar-body div:first-child a {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+nav .navbar-body div:first-child a img {
+    margin-left: 1.5rem;
+    border-radius: 50%;
+}
+
+nav .navbar-body div:first-child a p {
+    color: white;
+    margin-left: 1rem;
+    font-size: large;
+    font-weight: bold;
+}
+
+nav .navbar-body div:last-child {
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+nav .navbar-body div:last-child a {
+    font-weight: 600;
+    margin-right: 1.5rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+nav .navbar-body div:last-child a:hover {
+    color: rgb(var(--primary-rgb));
+    text-shadow: 0px 0px 5px rgb(var(--primary-rgb));
+    transition: all .50s;
+}
+
+nav .navbar-lighting {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(var(--primary-rgb));
+}
+
+nav .navbar-lighting::after {
+    position: relative;
+    content: "";
+    display: block;
+    width: 25%;
+    border: 0.2rem solid rgb(var(--primary-rgb));
+    animation-name: navbar-lighting;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    box-shadow: 
+        0px 0px 10px rgb(var(--primary-rgb)),
+        0px 0px 20px rgb(var(--primary-rgb)),
+        1px 0px 5px rgb(var(--primary-rgb)),
+        -1px 0px 5px rgb(var(--primary-rgb));
+
+
+}
+
+.developers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #000; /* Primary: hitam */
+}
+
+.developer-card:hover {
+    transform: scale(1.05); /* Perbesar sedikit saat hover */
+    border-color: #ffcc00; /* Ubah warna border saat hover */
+}
+
+.developer-card {
+    background-color: #1a1a1a; /* Hitam lebih terang untuk pembeda */
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 255, 0, 0.2); /* Shadow kuning */
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    color: #fff; /* Teks putih */
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+.developer-card img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.developer-card h3 {
+    font-size: 1.5em;
+    color: #FFD700; /* Warna kuning untuk heading */
+}
+
+.developer-card h4 {
+    margin-bottom: 10px;
+    background-color: #FFD700;
+    color: #000; /* Warna kuning untuk heading */
+}
+
+.developer-card p {
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #fff; /* Teks tetap putih */
+}
+
+.developer-card a {
+    color: #FFD700; /* Link kuning */
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000; /* Primary: hitam */
+    color: #FFD700; /* Secondary: kuning */
+    margin-top: 20px;
+    border-top: 3px solid #FFD700; /* Border atas dengan warna kuning */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek kedalaman */
+    font-family: 'Arial', sans-serif; /* Mengubah font */
+}
