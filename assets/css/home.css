@@ -282,14 +282,14 @@ header {
     padding: 20px;
     background-color: #f4f4f4;
 }
-
-.members-list {
+.member-list-vip {
     display: flex;
     flex-wrap: wrap;  /* Allows members to wrap to the next row */
-    justify-content: space-around;  /* Distributes members evenly */
-    margin: 20px 0;
-    padding: 0 10px;
+    padding-top: 30px;
+    background-color: #333; /* Warna latar belakang abu-abu gelap untuk kontras */
 }
+
+
 
 .member {
     text-align: center;
@@ -312,7 +312,46 @@ footer {
     color: white;
 }
 
+/* New member-vip styles */
+.member-vip {
+    display: block; /* Use block to make it standalone */
+    text-align: center;
+    max-width: 250px; /* Limit width */
+    margin: 20px auto 20px auto; /* Center and add 20px gap below */
+    border: 3px solid yellow; /* Border */
+    padding: 10px; /* Padding */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    transition: transform 0.3s ease; /* Animation on hover */
+    text-align: center;
+    max-width: 250px;
+    flex: 1 1 22%;  /* Flex basis of 22% ensures four members fit per row with space in between */
+    margin: 0 auto; /* Center the VIP member */
+    margin-bottom: 20px; /* Adds space between VIP member and rest */
+    padding-top: 10px;
+}
 
+.member-vip:hover {
+    transform: scale(1.05); /* Slight enlargement on hover */
+    border-color: #ffcc00; /* Change border color on hover */
+}
+
+.member-vip img {
+    width: 150px; /* Set width */
+    height: 150px; /* Set height */
+    border-radius: 50%; /* Circular image */
+    border: 5px solid black; /* Black border */
+    padding: 5px; /* Padding around the image */
+    background-color: yellow; /* Yellow background behind image */
+    transition: transform 0.3s ease; /* Animation on hover */
+    
+}
+
+
+.member-vip img:hover {
+    transform: scale(1.1); /* Perbesar sedikit gambar saat hover */
+}
 
 /* Gaya dasar halaman */
 body {
